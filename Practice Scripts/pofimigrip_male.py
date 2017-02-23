@@ -1,7 +1,7 @@
 import requests, bs4, re, urllib, os
 from time import sleep
 
-pofhome = 'http://www.pof.com'
+pofhome = 'http://www.pof.com/viewprofile.aspx?profile_id=133116417'
 pofprofile = 'https://www.pof.com/viewprofile.aspx?profile_id='
 pofSoup = None
 pidregex = re.compile(r'(\d){7,10}')
@@ -36,12 +36,11 @@ print("Starting PoF Image Account Image Ripper")
 get_page(pofhome)
 
 # Get All Profile Links
-links = pofSoup.select('.headline .link')
+links = pofSoup.select('.imagebarsingle a')
 
 pids = []
 
 for i in range(len(links)):
-
     pids = pids + [pidregex.search(str(links[i].get('href'))).group()]
     print(pids[i-1])
     
