@@ -2,10 +2,14 @@
 
 A place for me to put any scripts I write in Python.
 
-	Folders Descriptions
+##Folders Descriptions
 * practice
+	* place for random test scripts
 * Environments
-* \*
+	* Programming Environments for Projects
+* /*
+	* Each folder should represent a Projects
+	* Each Project should have a respective Env.
 
 ## Windows 10 - Py3 setup
 
